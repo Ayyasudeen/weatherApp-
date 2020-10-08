@@ -30,16 +30,16 @@ const updateUI = (data) => {
   //   const result = true ? 'value 1' : 'value 2';
   //   console.log(result);
 
-  //   let timeSrc = null; //source for the img day and night
-  //   if (weather.IsDayTime) {
-  //     timeSrc = "img/day.svg";
-  //   } else {
-  //     timeSrc = "img/night.svg";
-  //   }
-  //   time.setAttribute("src", timeSrc); //Ternary operator used instead
+  let timeSrc = null; //source for the img day and night
+  if (weather.IsDayTime) {
+    timeSrc = "img/day.svg";
+  } else {
+    timeSrc = "img/night.svg";
+  }
+  time.setAttribute("src", timeSrc); //Ternary operator used instead
 
   // Ternary operator method
-  let timeSrc = weather.IsDayTime ? "img/day.svg" : "img/night.svg";
+  //   let timeSrc = weather.IsDayTime ? "img/day.svg" : "img/night.svg";
 
   //remove the d-none class if present
   if (card.classList.contains("d-none")) {
